@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, useScroll, useSpring, useMotionTemplate, useMotionValue } from "framer-motion";
 import { Code2, Terminal, Laptop, BookOpen, Github, Mail, Twitter, ExternalLink, Send, User, Briefcase, Cpu, Phone, ArrowRight, ChevronDown, Mouse, Award } from "lucide-react";
-import avatarImage from "@assets/generated_images/3d_minimalist_developer_avatar_icon.png";
+import avatarImage from "@assets/generated_images/3d_glowing_letter_n_logo.png";
 import bgImage from "@assets/generated_images/dark_abstract_mesh_gradient_background.png";
 import googleVidsCert from "@assets/9496859_97799081764448398942_1764566731812.pdf";
 import { Button } from "@/components/ui/button";
