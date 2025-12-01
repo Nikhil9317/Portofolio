@@ -1,4 +1,5 @@
-import { motion, useScroll, useSpring } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, useScroll, useSpring, useMotionTemplate, useMotionValue } from "framer-motion";
 import { Code2, Terminal, Laptop, BookOpen, Github, Mail, Twitter, ExternalLink, Send, User, Briefcase, Cpu, Phone, ArrowRight, ChevronDown, Mouse } from "lucide-react";
 import avatarImage from "@assets/generated_images/3d_minimalist_developer_avatar_icon.png";
 import bgImage from "@assets/generated_images/dark_abstract_mesh_gradient_background.png";
@@ -15,6 +16,22 @@ export default function Home() {
     damping: 30,
     restDelta: 0.001
   });
+
+  // Mouse follower effect
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  useEffect(() => {
+    const handleMouseMove = ({ clientX, clientY }: MouseEvent) => {
+      mouseX.set(clientX);
+      mouseY.set(clientY);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, [mouseX, mouseY]);
+
+  const backgroundGlow = useMotionTemplate`radial-gradient(600px at ${mouseX}px ${mouseY}px, rgba(124, 58, 237, 0.15), transparent 80%)`;
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -60,6 +77,14 @@ export default function Home() {
           backgroundImage: `url(${bgImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
+        }}
+      />
+
+      {/* Mouse Glow Effect */}
+      <motion.div
+        className="fixed inset-0 z-0 pointer-events-none"
+        style={{
+          background: backgroundGlow
         }}
       />
 
