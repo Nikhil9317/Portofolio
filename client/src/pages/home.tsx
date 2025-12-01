@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code2, Terminal, Laptop, BookOpen, Github, Mail, Twitter, ExternalLink, Send, User, Briefcase, Cpu } from "lucide-react";
+import { Code2, Terminal, Laptop, BookOpen, Github, Mail, Twitter, ExternalLink, Send, User, Briefcase, Cpu, Phone } from "lucide-react";
 import avatarImage from "@assets/generated_images/3d_minimalist_developer_avatar_icon.png";
 import bgImage from "@assets/generated_images/dark_abstract_mesh_gradient_background.png";
 import { Button } from "@/components/ui/button";
@@ -215,7 +215,13 @@ export default function Home() {
                   <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-primary">
                     <Mail size={18} />
                   </div>
-                  <span>hello@nikhilkoundal.dev</span>
+                  <span>unknown93177@gmail.com</span>
+                </div>
+                <div className="flex items-center gap-3 text-muted-foreground">
+                  <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-primary">
+                    <Phone size={18} />
+                  </div>
+                  <span>+91 9317751056</span>
                 </div>
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-primary">
