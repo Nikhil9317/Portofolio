@@ -81,7 +81,7 @@ export default function Home() {
               </h1>
               
               <p className="text-lg text-muted-foreground mb-8 max-w-lg leading-relaxed">
-                A passionate developer and student at <span className="text-foreground font-medium">DAV MANAI</span>. 
+                A passionate developer and student at <span className="text-foreground font-medium">Lovely Professional University</span>. 
                 I build accessible, pixel-perfect, performant, and responsive web experiences.
               </p>
 
@@ -135,19 +135,32 @@ export default function Home() {
             Education
           </h2>
           
-          <div className="glass-card p-8 rounded-xl border border-white/5 hover:border-primary/30 transition-colors duration-300">
-            <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-4">
-              <div>
-                <h3 className="text-xl font-bold">DAV MANAI</h3>
-                <p className="text-primary font-mono text-sm mt-1">Computer Science Student</p>
+          <div className="space-y-6">
+            <div className="glass-card p-8 rounded-xl border border-white/5 hover:border-primary/30 transition-colors duration-300">
+              <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-4">
+                <div>
+                  <h3 className="text-xl font-bold">Lovely Professional University</h3>
+                  <p className="text-primary font-mono text-sm mt-1">Bachelor of Technology</p>
+                </div>
+                <span className="text-sm text-muted-foreground font-mono bg-white/5 px-3 py-1 rounded border border-white/10">Present</span>
               </div>
-              <span className="text-sm text-muted-foreground font-mono bg-white/5 px-3 py-1 rounded border border-white/10">Present</span>
+              <p className="text-muted-foreground">
+                Specializing in Computer Science and Engineering. Focusing on advanced algorithms, data structures, and full-stack development.
+              </p>
             </div>
-            <p className="text-muted-foreground">
-              Currently pursuing studies with a focus on Computer Science and Mathematics. 
-              Building a strong foundation in programming logic, algorithms, and modern web technologies.
-              Active participant in coding clubs and tech events.
-            </p>
+
+            <div className="glass-card p-8 rounded-xl border border-white/5 hover:border-primary/30 transition-colors duration-300 opacity-80 hover:opacity-100">
+              <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-4">
+                <div>
+                  <h3 className="text-xl font-bold">DAV MANAI</h3>
+                  <p className="text-primary font-mono text-sm mt-1">Secondary Education</p>
+                </div>
+                <span className="text-sm text-muted-foreground font-mono bg-white/5 px-3 py-1 rounded border border-white/10">Past</span>
+              </div>
+              <p className="text-muted-foreground">
+                Completed foundational studies with a focus on Science and Mathematics.
+              </p>
+            </div>
           </div>
         </motion.section>
 
@@ -227,7 +240,7 @@ export default function Home() {
                   <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-primary">
                     <User size={18} />
                   </div>
-                  <span>DAV MANAI, Student</span>
+                  <span>LPU, Student</span>
                 </div>
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-primary">
