@@ -4,6 +4,7 @@ import { Code2, Terminal, Laptop, BookOpen, Github, Mail, Twitter, ExternalLink,
 import avatarImage from "@assets/generated_images/3d_glowing_letter_n_logo.png";
 import bgImage from "@assets/generated_images/dark_abstract_mesh_gradient_background.png";
 import googleVidsCert from "@assets/9496859_97799081764448398942_1764566731812.pdf";
+import collectiveLeadershipCert from "@assets/B208_1_statement_1764567911306.pdf";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -350,6 +351,13 @@ export default function Home() {
               issuer="Simplilearn"
               date="2025"
               link="https://simpli-web.app.link/e/x0pTb9ZpHYb"
+            />
+            <CertificationCard 
+              variants={itemVariants}
+              title="Collective Leadership" 
+              issuer="OpenLearn"
+              date="Oct 25, 2025"
+              link={collectiveLeadershipCert}
             />
           </div>
         </motion.section>
