@@ -4,7 +4,6 @@ import { Code2, Terminal, Laptop, BookOpen, Github, Mail, Twitter, ExternalLink,
 import avatarImage from "@assets/generated_images/3d_glowing_letter_n_logo.png";
 import bgImage from "@assets/generated_images/dark_abstract_mesh_gradient_background.png";
 import googleVidsCert from "@assets/9496859_97799081764448398942_1764566731812.pdf";
-import googleCloudCert from "@assets/Screenshot 2025-12-01 110306_1764567212043.png";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -344,13 +343,6 @@ export default function Home() {
               issuer="Lovely Professional University"
               date="Nov 2025"
               link={googleVidsCert}
-            />
-            <CertificationCard 
-              variants={itemVariants}
-              title="Create Engaging Video with Google Vids" 
-              issuer="Google Cloud / Simplilearn"
-              date="Nov 29, 2025"
-              link={googleCloudCert}
             />
           </div>
         </motion.section>
