@@ -95,13 +95,12 @@ export default function Home() {
           <motion.span 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="font-mono font-bold text-lg tracking-tighter cursor-pointer"
+            className="font-mono font-bold text-lg tracking-tighter cursor-pointer flex items-center gap-2"
             whileHover={{ scale: 1.05 }}
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <span className="text-primary">&lt;</span>
-            Nikhil
-            <span className="text-primary">/&gt;</span>
+            <img src={avatarImage} alt="Logo" className="w-8 h-8 rounded-full border border-primary/50" />
+            <span>Nikhil</span>
           </motion.span>
           <div className="hidden md:flex gap-8 text-sm font-medium text-muted-foreground">
             {['About', 'Skills', 'Projects', 'Certifications', 'Contact'].map((item, i) => (
