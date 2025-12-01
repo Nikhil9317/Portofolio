@@ -283,27 +283,27 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-6">
             <ProjectCard 
               variants={itemVariants}
-              title="Portfolio V1" 
-              description="A minimalist developer portfolio built with React, Tailwind CSS, and Framer Motion. Features dark mode and smooth animations."
-              tags={["React", "Tailwind", "Framer Motion"]}
+              title="Number Guessing Game" 
+              description="A classic beginner Python project where the computer picks a random number and the user has to guess it with hints."
+              tags={["Python", "CLI", "Logic"]}
             />
             <ProjectCard 
               variants={itemVariants}
-              title="Task Master" 
-              description="A productivity application for managing daily tasks and todos. Includes local storage persistence and categorization."
-              tags={["JavaScript", "CSS3", "HTML5"]}
+              title="Simple Calculator" 
+              description="A basic web-based calculator that performs arithmetic operations. Built to understand DOM manipulation and event handling."
+              tags={["HTML", "CSS", "JavaScript"]}
             />
             <ProjectCard 
               variants={itemVariants}
-              title="Weather Dashboard" 
-              description="Real-time weather tracking application consuming public APIs to display forecast data for any city worldwide."
-              tags={["Python", "API", "Data"]}
+              title="Digital Clock" 
+              description="A real-time digital clock interface that updates every second. Features a dark mode toggle and date display."
+              tags={["JavaScript", "Date API", "CSS"]}
             />
             <ProjectCard 
               variants={itemVariants}
-              title="Code Snippets" 
-              description="A collection of useful Python and JavaScript utility scripts for automating daily development workflows."
-              tags={["Python", "Automation", "Scripts"]}
+              title="Basic To-Do List" 
+              description="A simple list application to add and remove tasks. Uses local storage to save your tasks even after refreshing."
+              tags={["JavaScript", "LocalStorage", "HTML"]}
             />
           </div>
         </motion.section>
