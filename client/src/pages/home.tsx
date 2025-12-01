@@ -386,7 +386,7 @@ export default function Home() {
       </main>
       
       <footer className="py-8 text-center text-sm text-muted-foreground/60 font-mono border-t border-white/5">
-        <p>© {new Date().getFullYear()} Nikhil Koundal. Crafted with Code.</p>
+        <p>© {new Date().getFullYear()} Nikhil Koundal.</p>
       </footer>
     </div>
   );
