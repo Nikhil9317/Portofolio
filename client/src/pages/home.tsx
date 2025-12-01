@@ -344,6 +344,13 @@ export default function Home() {
               date="Nov 2025"
               link={googleVidsCert}
             />
+            <CertificationCard 
+              variants={itemVariants}
+              title="Google Cloud Computing" 
+              issuer="Simplilearn"
+              date="2025"
+              link="https://simpli-web.app.link/e/x0pTb9ZpHYb"
+            />
           </div>
         </motion.section>
 
