@@ -238,30 +238,44 @@ export default function Home() {
           </motion.h2>
           
           <div className="space-y-6">
-            <motion.div variants={itemVariants} className="glass-card p-8 rounded-xl border border-white/5 hover:border-primary/30 transition-colors duration-300 group">
-              <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-4">
-                <div>
-                  <h3 className="text-xl font-bold group-hover:text-primary transition-colors">Lovely Professional University</h3>
-                  <p className="text-primary font-mono text-sm mt-1">Bachelor of Technology</p>
+            <motion.div 
+              variants={itemVariants} 
+              whileHover={{ scale: 1.01, boxShadow: "0 10px 30px -10px rgba(124, 58, 237, 0.2)" }}
+              className="glass-card p-8 rounded-xl border border-white/5 hover:border-primary/50 transition-all duration-300 group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative z-10">
+                <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-4">
+                  <div>
+                    <h3 className="text-xl font-bold group-hover:text-primary transition-colors">Lovely Professional University</h3>
+                    <p className="text-primary font-mono text-sm mt-1">Bachelor of Technology</p>
+                  </div>
+                  <span className="text-sm text-muted-foreground font-mono bg-white/5 px-3 py-1 rounded border border-white/10">Present</span>
                 </div>
-                <span className="text-sm text-muted-foreground font-mono bg-white/5 px-3 py-1 rounded border border-white/10">Present</span>
+                <p className="text-muted-foreground">
+                  Specializing in Computer Science and Engineering. Focusing on advanced algorithms, data structures, and full-stack development.
+                </p>
               </div>
-              <p className="text-muted-foreground">
-                Specializing in Computer Science and Engineering. Focusing on advanced algorithms, data structures, and full-stack development.
-              </p>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="glass-card p-8 rounded-xl border border-white/5 hover:border-primary/30 transition-colors duration-300 opacity-80 hover:opacity-100 group">
-              <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-4">
-                <div>
-                  <h3 className="text-xl font-bold group-hover:text-primary transition-colors">Dav Sr Sec Public School Manai</h3>
-                  <p className="text-primary font-mono text-sm mt-1">Secondary Education</p>
+            <motion.div 
+              variants={itemVariants} 
+              whileHover={{ scale: 1.01, boxShadow: "0 10px 30px -10px rgba(124, 58, 237, 0.2)" }}
+              className="glass-card p-8 rounded-xl border border-white/5 hover:border-primary/50 transition-all duration-300 opacity-80 hover:opacity-100 group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative z-10">
+                <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-4">
+                  <div>
+                    <h3 className="text-xl font-bold group-hover:text-primary transition-colors">Dav Sr Sec Public School Manai</h3>
+                    <p className="text-primary font-mono text-sm mt-1">Secondary Education</p>
+                  </div>
+                  <span className="text-sm text-muted-foreground font-mono bg-white/5 px-3 py-1 rounded border border-white/10">Past</span>
                 </div>
-                <span className="text-sm text-muted-foreground font-mono bg-white/5 px-3 py-1 rounded border border-white/10">Past</span>
+                <p className="text-muted-foreground">
+                  Completed foundational studies with a focus on Science and Mathematics.
+                </p>
               </div>
-              <p className="text-muted-foreground">
-                Completed foundational studies with a focus on Science and Mathematics.
-              </p>
             </motion.div>
           </div>
         </motion.section>
@@ -410,13 +424,14 @@ function SkillCard({ name, icon, color, description, variants }: { name: string,
   return (
     <motion.div 
       variants={variants}
-      whileHover={{ y: -5 }}
-      className="group p-6 rounded-xl bg-white/[0.02] hover:bg-white/[0.05] border border-white/5 hover:border-primary/30 transition-colors duration-300 flex flex-col items-center gap-4 text-center"
+      whileHover={{ y: -8, scale: 1.02, boxShadow: "0 10px 30px -10px rgba(124, 58, 237, 0.3)" }}
+      className="group p-6 rounded-xl bg-white/[0.02] hover:bg-white/[0.05] border border-white/5 hover:border-primary/50 transition-colors duration-300 flex flex-col items-center gap-4 text-center relative overflow-hidden"
     >
-      <div className={`p-4 rounded-xl bg-white/5 group-hover:scale-110 transition-transform duration-300 ${color} ring-1 ring-white/5 shadow-lg shadow-primary/5`}>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className={`p-4 rounded-xl bg-white/5 group-hover:scale-110 transition-transform duration-300 ${color} ring-1 ring-white/5 shadow-lg shadow-primary/5 relative z-10`}>
         {icon}
       </div>
-      <div>
+      <div className="relative z-10">
         <span className="font-medium font-mono block mb-1">{name}</span>
         <span className="text-xs text-muted-foreground">{description}</span>
       </div>
@@ -426,21 +441,22 @@ function SkillCard({ name, icon, color, description, variants }: { name: string,
 
 function ProjectCard({ title, description, tags, variants }: { title: string, description: string, tags: string[], variants?: any }) {
   return (
-    <motion.div variants={variants} whileHover={{ y: -5 }}>
-      <Card className="h-full bg-black/20 border-white/10 backdrop-blur-sm overflow-hidden group hover:border-primary/40 transition-colors duration-300 flex flex-col">
-        <CardHeader>
+    <motion.div variants={variants} whileHover={{ y: -8, scale: 1.02 }}>
+      <Card className="h-full bg-black/20 border-white/10 backdrop-blur-sm overflow-hidden group hover:border-primary/50 transition-all duration-300 flex flex-col hover:shadow-[0_10px_30px_-10px_rgba(124,58,237,0.3)] relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+        <CardHeader className="relative z-10">
           <CardTitle className="flex justify-between items-center">
-            <span className="group-hover:text-primary transition-colors">{title}</span>
-            <ExternalLink size={16} className="text-muted-foreground opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+            <span className="group-hover:text-primary transition-colors text-lg">{title}</span>
+            <ExternalLink size={18} className="text-muted-foreground opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
           </CardTitle>
         </CardHeader>
-        <CardContent className="flex-1 flex flex-col justify-between">
+        <CardContent className="flex-1 flex flex-col justify-between relative z-10">
           <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
             {description}
           </p>
           <div className="flex flex-wrap gap-2">
             {tags.map((tag) => (
-              <Badge key={tag} variant="secondary" className="bg-white/5 hover:bg-white/10 text-xs font-normal transition-colors">
+              <Badge key={tag} variant="secondary" className="bg-white/5 hover:bg-white/10 text-xs font-normal transition-colors border border-white/5 group-hover:border-primary/20">
                 {tag}
               </Badge>
             ))}
