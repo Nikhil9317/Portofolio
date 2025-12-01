@@ -344,6 +344,13 @@ export default function Home() {
               date="Nov 2025"
               link={googleVidsCert}
             />
+            <CertificationCard 
+              variants={itemVariants}
+              title="Google Cloud Computing Foundations" 
+              issuer="Google Cloud"
+              date="2025"
+              link="#"
+            />
           </div>
         </motion.section>
 
