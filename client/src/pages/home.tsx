@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, useScroll, useSpring, useMotionTemplate, useMotionValue } from "framer-motion";
-import { Code2, Terminal, Laptop, BookOpen, Github, Mail, Twitter, ExternalLink, Send, User, Briefcase, Cpu, Phone, ArrowRight, ChevronDown, Mouse } from "lucide-react";
+import { Code2, Terminal, Laptop, BookOpen, Github, Mail, Twitter, ExternalLink, Send, User, Briefcase, Cpu, Phone, ArrowRight, ChevronDown, Mouse, Award } from "lucide-react";
 import avatarImage from "@assets/generated_images/3d_minimalist_developer_avatar_icon.png";
 import bgImage from "@assets/generated_images/dark_abstract_mesh_gradient_background.png";
 import { Button } from "@/components/ui/button";
@@ -103,7 +103,7 @@ export default function Home() {
             <span className="text-primary">/&gt;</span>
           </motion.span>
           <div className="hidden md:flex gap-8 text-sm font-medium text-muted-foreground">
-            {['About', 'Skills', 'Projects', 'Contact'].map((item, i) => (
+            {['About', 'Skills', 'Projects', 'Certifications', 'Contact'].map((item, i) => (
               <motion.button
                 key={item}
                 initial={{ opacity: 0, y: -10 }}
@@ -322,6 +322,31 @@ export default function Home() {
           </div>
         </motion.section>
 
+        {/* Certifications Section */}
+        <motion.section
+          id="certifications"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={containerVariants}
+          className="py-20"
+        >
+          <motion.h2 variants={itemVariants} className="text-2xl font-mono font-bold mb-8 flex items-center gap-3">
+            <Award className="text-primary" />
+            Certifications
+          </motion.h2>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <CertificationCard 
+              variants={itemVariants}
+              title="Professional Development Certificate" 
+              issuer="Lovely Professional University"
+              date="2025"
+              link="#"
+            />
+          </div>
+        </motion.section>
+
         {/* Contact Section */}
         <motion.section
           id="contact"
@@ -403,6 +428,39 @@ export default function Home() {
         <p>© {new Date().getFullYear()} Nikhil Koundal.</p>
       </footer>
     </div>
+  );
+}
+
+function CertificationCard({ title, issuer, date, link, variants }: { title: string, issuer: string, date: string, link: string, variants?: any }) {
+  return (
+    <motion.div variants={variants} whileHover={{ y: -8, scale: 1.02 }}>
+      <Card className="h-full bg-black/20 border-white/10 backdrop-blur-sm overflow-hidden group hover:border-primary/50 transition-all duration-300 flex flex-col hover:shadow-[0_10px_30px_-10px_rgba(124,58,237,0.3)] relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+        <CardHeader className="relative z-10 pb-2">
+          <CardTitle className="flex justify-between items-start">
+            <span className="group-hover:text-primary transition-colors text-lg leading-tight">{title}</span>
+            <Award size={20} className="text-muted-foreground group-hover:text-primary transition-colors shrink-0 ml-4" />
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="relative z-10 flex-1 flex flex-col justify-end pt-4">
+          <div className="flex justify-between items-end">
+            <div>
+              <p className="text-sm font-medium text-foreground">{issuer}</p>
+              <p className="text-xs text-muted-foreground mt-1">{date}</p>
+            </div>
+            <a 
+              href={link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-white/5 hover:bg-primary/20 hover:text-primary transition-colors"
+              title="View Certificate"
+            >
+              <ExternalLink size={16} />
+            </a>
+          </div>
+        </CardContent>
+      </Card>
+    </motion.div>
   );
 }
 
