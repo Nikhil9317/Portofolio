@@ -3,6 +3,7 @@ import { motion, useScroll, useSpring, useMotionTemplate, useMotionValue } from 
 import { Code2, Terminal, Laptop, BookOpen, Github, Mail, Twitter, ExternalLink, Send, User, Briefcase, Cpu, Phone, ArrowRight, ChevronDown, Mouse, Award } from "lucide-react";
 import avatarImage from "@assets/generated_images/3d_minimalist_developer_avatar_icon.png";
 import bgImage from "@assets/generated_images/dark_abstract_mesh_gradient_background.png";
+import googleVidsCert from "@assets/9496859_97799081764448398942_1764566731812.pdf";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -339,10 +340,10 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-6">
             <CertificationCard 
               variants={itemVariants}
-              title="Professional Development Certificate" 
+              title="Create Engaging Video with Google Vids" 
               issuer="Lovely Professional University"
-              date="2025"
-              link="file:///C:/Users/LENOVO/Downloads/9496859_97799081764448398942.pdf"
+              date="Nov 2025"
+              link={googleVidsCert}
             />
           </div>
         </motion.section>
