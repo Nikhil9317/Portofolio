@@ -254,7 +254,7 @@ export default function Home() {
             <motion.div variants={itemVariants} className="glass-card p-8 rounded-xl border border-white/5 hover:border-primary/30 transition-colors duration-300 opacity-80 hover:opacity-100 group">
               <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-4">
                 <div>
-                  <h3 className="text-xl font-bold group-hover:text-primary transition-colors">DAV MANAI</h3>
+                  <h3 className="text-xl font-bold group-hover:text-primary transition-colors">Dav Sr Sec Public School Manai</h3>
                   <p className="text-primary font-mono text-sm mt-1">Secondary Education</p>
                 </div>
                 <span className="text-sm text-muted-foreground font-mono bg-white/5 px-3 py-1 rounded border border-white/10">Past</span>
