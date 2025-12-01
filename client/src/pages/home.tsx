@@ -342,7 +342,7 @@ export default function Home() {
               title="Professional Development Certificate" 
               issuer="Lovely Professional University"
               date="2025"
-              link="#"
+              link="file:///C:/Users/LENOVO/Downloads/9496859_97799081764448398942.pdf"
             />
           </div>
         </motion.section>
