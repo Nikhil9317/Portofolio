@@ -1,5 +1,5 @@
 import { motion, useScroll, useSpring } from "framer-motion";
-import { Code2, Terminal, Laptop, BookOpen, Github, Mail, Twitter, ExternalLink, Send, User, Briefcase, Cpu, Phone, ArrowRight } from "lucide-react";
+import { Code2, Terminal, Laptop, BookOpen, Github, Mail, Twitter, ExternalLink, Send, User, Briefcase, Cpu, Phone, ArrowRight, ChevronDown, Mouse } from "lucide-react";
 import avatarImage from "@assets/generated_images/3d_minimalist_developer_avatar_icon.png";
 import bgImage from "@assets/generated_images/dark_abstract_mesh_gradient_background.png";
 import { Button } from "@/components/ui/button";
@@ -157,6 +157,22 @@ export default function Home() {
                 </motion.div>
               </div>
             </div>
+          </motion.div>
+
+          {/* Scroll Down Indicator */}
+          <motion.div 
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 0.8 }}
+            className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground"
+          >
+            <span className="text-xs font-mono uppercase tracking-widest">Scroll</span>
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+            >
+              <ChevronDown size={20} />
+            </motion.div>
           </motion.div>
         </section>
 
